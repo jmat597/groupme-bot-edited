@@ -1,33 +1,28 @@
-var http, director, cool, bot, router, server, port;
+var bot = require('fancy-groupme-bot');
+var util = require('util');
 
-http        = require('http');
-director    = require('director');
-cool        = require('cool-ascii-faces');
-bot         = require('./bot.js');
 
-router = new director.http.Router({
-  '/' : {
-    post: bot.respond,
-    get: ping
+// local configuration read from env.
+const TOKEN = process.env['TOKEN']; // your groupme api token
+const GROUP = process.env['GROUP']; // the room you want to join
+const NAME = process.env['NAME']; // the name of your bot
+const URL = process.env['URL']; // the domain you're serving from, should be accessible by Groupme.
+const CONFIG = {token:TOKEN, group:GROUP, name:NAME, url:URL};
+const PORT = process.env.port || 8000;
+
+var mybot = bot(CONFIG);
+
+mybot.on('botRegistered', function(b) {
+  console.log("I am registered");
+  b.message("WHAT UP BRO?");
+});
+
+mybot.on('botMessage', function(b, message) {
+  console.log("I got a message, fyi");
+  if (message.name != b.name) {
+    b.message(message.name + " said " + message.text);
   }
 });
 
-server = http.createServer(function (req, res) {
-  req.chunks = [];
-  req.on('data', function (chunk) {
-    req.chunks.push(chunk.toString());
-  });
-
-  router.dispatch(req, res, function(err) {
-    res.writeHead(err.status, {"Content-Type": "text/plain"});
-    res.end(err.message);
-  });
-});
-
-port = Number(process.env.PORT || 5000);
-server.listen(port);
-
-function ping() {
-  this.res.writeHead(200);
-  this.res.end("Hey, I'm Cool Guy.");
-}
+console.log("i am serving");
+mybot.serve(PORT);
