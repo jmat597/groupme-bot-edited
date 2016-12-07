@@ -26,11 +26,11 @@ mybot.on('botMessage', function(b, message) {
 });
 
 var now = new Date();
-var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 47, 0, 0) - now;
+var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 50, 0, 0) - now;
 if (millisTill10 < 0) {
      millisTill10 += 86400000; // it's after 10am, try 10am tomorrow.
 }
-setTimeout(console.log("Timeout"), millisTill10);
+setTimeout(function(){console.log("Timeout")}, millisTill10);
 
 console.log("i am serving");
 console.log(process.env.PORT);
