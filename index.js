@@ -22,6 +22,7 @@ mybot.on('botMessage', function(b, message) {
   if (message.name != b.name && message.name != "GroupMe") {
     b.message(message.name + " said " + message.text);
 	console.log(b);
+	console.log(mybot);
   }
 });
 
@@ -32,6 +33,7 @@ if (millisTill10 < 0) {
 }
 setTimeout(function(){console.log("Timeout")}, millisTill10);
 
-console.log("i am serving");
-console.log(process.env.PORT);
+console.log("i am serving")
+console.log(now);
+cosnole.log(millisTill10);
 mybot.serve(PORT);
