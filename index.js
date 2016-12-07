@@ -25,7 +25,7 @@ var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 14
 if (millisTill10 < 0) {
      millisTill10 += 86400000; // it's after 10am, try 10am tomorrow.
 }
-setTimeout(function(){console.log("Timeout");mybot.message("TIME CHECK");}, millisTill10);
+setTimeout(function(){console.log("Timeout");mybot.message("Screw you, mecha-DBo");}, millisTill10);
 
 console.log("i am serving");
 console.log(now);
