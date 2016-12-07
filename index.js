@@ -21,19 +21,17 @@ mybot.on('botMessage', function(b, message) {
   console.log("I got a message, fyi");
   if (message.name != b.name && message.name != "GroupMe") {
     b.message(message.name + " said " + message.text);
-	console.log(b);
-	console.log(mybot);
   }
 });
 
 var now = new Date();
-var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 1, 0, 0, 0) - now;
+var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 1, 05, 0, 0) - now;
 if (millisTill10 < 0) {
      millisTill10 += 86400000; // it's after 10am, try 10am tomorrow.
 }
-setTimeout(function(){console.log("Timeout")}, millisTill10);
+setTimeout(function(){console.log("Timeout");mybot.message("TIME CHECK");}, millisTill10);
 
-console.log("i am serving")
+console.log("i am serving");
 console.log(now);
 console.log(millisTill10);
 mybot.serve(PORT);
