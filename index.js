@@ -19,7 +19,7 @@ mybot.on('botRegistered', function(b) {
 
 mybot.on('botMessage', function(b, message) {
   console.log("I got a message, fyi");
-  if (message.name != b.name) {
+  if (message.name != b.name && message.name != "GroupMe") {
     b.message(message.name + " said " + message.text);
   }
 });
