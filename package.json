@@ -1,32 +1,11 @@
 {
-  "name": "groupme-fancy-testbot",
-  "version": "0.0.1",
-  "description": "A sample Node.js app using Express 4",
+  "name": "newbot",
+  "version": "1.0.0",
+  "description": "A simple groupme test bot using the fancy wrapper",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "director": "",
-    "cool-ascii-faces": "~1.3.x"
-  },
-  "engines": {
-    "node": "0.10.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/heroku/node-js-getting-started.git"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/heroku/node-js-getting-started/issues"
-  },
-  "homepage": "https://github.com/heroku/node-js-getting-started#readme",
-  "devDependencies": {},
-  "author": "Justin Matthews"
+  "author": "Justin Matthews",
+  "license": "ISC"
 }
