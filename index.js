@@ -1,4 +1,4 @@
-var bot = require(./wrap.js);
+var bot = require('./wrap.js');
 var util = require('util');
 
 
