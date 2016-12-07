@@ -35,5 +35,5 @@ setTimeout(function(){console.log("Timeout")}, millisTill10);
 
 console.log("i am serving")
 console.log(now);
-cosnole.log(millisTill10);
+console.log(millisTill10);
 mybot.serve(PORT);
