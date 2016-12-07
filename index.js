@@ -8,7 +8,7 @@ const GROUP = process.env['GROUP']; // the room you want to join
 const NAME = process.env['NAME']; // the name of your bot
 const URL = process.env['URL']; // the domain you're serving from, should be accessible by Groupme.
 const CONFIG = {token:TOKEN, group:GROUP, name:NAME, url:URL};
-const PORT = process.env.port || 8000;
+const PORT = process.env.PORT || 8000;
 
 var mybot = bot(CONFIG);
 
@@ -25,5 +25,5 @@ mybot.on('botMessage', function(b, message) {
 });
 
 console.log("i am serving");
-console.log(process.env.port);
+console.log(process.env.PORT);
 mybot.serve(PORT);
