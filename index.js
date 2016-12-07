@@ -25,5 +25,5 @@ mybot.on('botMessage', function(b, message) {
 });
 
 console.log("i am serving");
-console.log(PORT);
+console.log(process.env.port);
 mybot.serve(PORT);
