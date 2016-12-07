@@ -9,7 +9,6 @@
   "author": "Justin Matthews",
   "license": "ISC",
   "dependencies": {
-    "fancy-groupme-bot": "https://github.com/jmat597/fancy-groupme-bot/tarball/master"
-  },
+},
   "devDependencies": {}
 }
