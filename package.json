@@ -7,5 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Justin Matthews",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmat597/groupme-bot-edited.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmat597/groupme-bot-edited/issues"
+  },
+  "homepage": "https://github.com/jmat597/groupme-bot-edited#readme"
 }
